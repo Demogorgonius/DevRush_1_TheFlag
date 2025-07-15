@@ -12,8 +12,8 @@ struct ContentView: View {
     @State private var showingScore = false
     @State private var scoreTitle = ""
     
-    var countries = ["Estonia", "France", "Germany", "Ireland", "Italy", "Nigeria", "Poland", "Spain", "UK", "US"].shuffled()
-    var correctAnswer = Int.random(in: 0...2)
+    @State private var countries = ["Estonia", "France", "Germany", "Ireland", "Italy", "Nigeria", "Poland", "Spain", "UK", "US"].shuffled()
+    @State private var correctAnswer = Int.random(in: 0...2)
     
     var textCorrect = String.LocalizationValue(stringLiteral: "textCorrect")
     var textWrong = String.LocalizationValue(stringLiteral: "textWrong")
@@ -57,7 +57,10 @@ struct ContentView: View {
         
     }
     
-    
+    func askQuestions() {
+        countries.shuffle()
+        correctAnswer = Int.random(in: 0...2)
+    }
     
 }
 
