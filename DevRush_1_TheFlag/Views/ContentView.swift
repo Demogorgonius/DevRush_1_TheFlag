@@ -25,6 +25,11 @@ struct ContentView: View {
             Color.gray
                 .ignoresSafeArea()
             
+                .alert(scoreTitle, isPresented: $showingScore) {
+                    Button(LocalizedStringKey("button_Continue"), action: askQuestions)
+                } message: {
+                    Text(LocalizedStringKey("button_Continue_Text"))
+                }
             VStack(spacing: 30) {
                 VStack {
                     Text(LocalizedStringKey("text_tapTheFlag"))

@@ -1,6 +1,40 @@
 {
   "sourceLanguage" : "ru",
   "strings" : {
+    "button_Continue" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Continue"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Продолжить"
+          }
+        }
+      }
+    },
+    "button_Continue_Text" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Your score is ???"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "У Вас ??? очков"
+          }
+        }
+      }
+    },
     "text_tapTheFlag" : {
       "extractionState" : "manual",
       "localizations" : {
