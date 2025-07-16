@@ -22,7 +22,7 @@ struct ContentView: View {
         
         ZStack {
             
-            Color.gray
+            Color.teal
                 .ignoresSafeArea()
             
                 .alert(scoreTitle, isPresented: $showingScore) {
@@ -30,13 +30,20 @@ struct ContentView: View {
                 } message: {
                     Text(LocalizedStringKey("button_Continue_Text"))
                 }
-            VStack(spacing: 30) {
+            VStack(spacing: 15) {
                 VStack {
                     Text(LocalizedStringKey("text_tapTheFlag"))
-                        .foregroundStyle(.white)
-                    Text(countries[correctAnswer])
-                        .foregroundStyle(.white)
+                        .foregroundStyle(.gray)
+                        .fontWeight(.heavy)
+                    Text(LocalizedStringKey(countries[correctAnswer]))
+                        .foregroundStyle(.gray)
+                        .fontWeight(.bold)
+                    
                 }
+                .frame(maxWidth: .infinity)
+                .padding(.vertical, 20)
+                .background(.regularMaterial)
+                .clipShape(.rect(cornerRadius: 20))
                 
                 ForEach(0..<3) { number in
                     
@@ -44,6 +51,8 @@ struct ContentView: View {
                         flagTapped(number)
                     } label: {
                         Image(countries[number])
+                            .clipShape(.buttonBorder)
+                            .shadow(color: .black, radius: 5)
                     }
                 }
             }
