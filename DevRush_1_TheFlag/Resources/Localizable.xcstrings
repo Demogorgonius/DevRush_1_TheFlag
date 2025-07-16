@@ -18,19 +18,36 @@
         }
       }
     },
-    "button_Continue_Text" : {
+    "button_Continue_Text_1" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Your score is ???"
+            "value" : "Your score is "
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "У Вас ??? очков"
+            "value" : "У Вас "
+          }
+        }
+      }
+    },
+    "button_Continue_Text_2" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "!"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : " очков!"
           }
         }
       }

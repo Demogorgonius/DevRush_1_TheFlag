@@ -12,6 +12,8 @@ struct ContentView: View {
     @State private var showingScore = false
     @State private var scoreTitle = ""
     
+    @State private var score: Int = 0
+    
     @State private var countries = ["Estonia", "France", "Germany", "Ireland", "Italy", "Nigeria", "Poland", "Spain", "UK", "US"].shuffled()
     @State private var correctAnswer = Int.random(in: 0...2)
     
@@ -28,7 +30,7 @@ struct ContentView: View {
                 .alert(scoreTitle, isPresented: $showingScore) {
                     Button(LocalizedStringKey("button_Continue"), action: askQuestions)
                 } message: {
-                    Text(LocalizedStringKey("button_Continue_Text"))
+                    Text(String(localized: String.LocalizationValue(stringLiteral: "button_Continue_Text_1")) + String(score) + String(localized: String.LocalizationValue(stringLiteral: "button_Continue_Text_2")))
                 }
             VStack(spacing: 15) {
                 VStack {
@@ -63,6 +65,7 @@ struct ContentView: View {
         
         if number == correctAnswer {
             scoreTitle = String(localized: textCorrect)
+            score += 1
         } else {
             scoreTitle = String(localized: textWrong)
         }
